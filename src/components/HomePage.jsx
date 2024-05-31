@@ -141,15 +141,15 @@ function HomePage() {
     setSearchVal("")
   }
 
-  // useEffect(() => {
-  //   getMovieDb()
-  //   if(geners.length === 0){
-  //     getGeners()
-  //   }
-  //   if(countries.length === 0){
-  //     getCountries()
-  //   }
-  // }, [getGener, setGeners]);
+  useEffect(() => {
+    getMovieDb()
+    if(geners.length === 0){
+      getGeners()
+    }
+    if(countries.length === 0){
+      getCountries()
+    }
+  }, [getGener, setGeners]);
 
   return (
     <div className=" bg-slate-900">
