@@ -17,8 +17,8 @@ function SingleMovie() {
         output_language: "en",
       },
       headers: {
-        "X-RapidAPI-Key": import.meta.env.VITE_X-RAPIDAPI-KEY,
-        "X-RapidAPI-Host": import.meta.env.VITE_X-RAPIDAPI-HOST
+        "X-RapidAPI-Key": import.meta.env.VITE_X_RAPIDAPI_KEY,
+        "X-RapidAPI-Host": import.meta.env.VITE_X_RAPIDAPI_HOST
       },
     };
 
@@ -32,7 +32,7 @@ function SingleMovie() {
   };
 
   useEffect(() => {
-    // getTheMovie();
+    getTheMovie();
   }, [id]);
 
   return (

@@ -48,8 +48,8 @@ function HomePage() {
         show_type: "movie",
       },
       headers: {
-        "X-RapidAPI-Key": import.meta.env.VITE_X-RAPIDAPI-KEY,
-        "X-RapidAPI-Host": import.meta.env.VITE_X-RAPIDAPI-HOST
+        "X-RapidAPI-Key": import.meta.env.VITE_X_RAPIDAPI_KEY,
+        "X-RapidAPI-Host": import.meta.env.VITE_X_RAPIDAPI_HOST
       },
     };
 
@@ -70,8 +70,8 @@ function HomePage() {
         output_language: "en",
       },
       headers: {
-        "X-RapidAPI-Key": import.meta.env.VITE_X-RAPIDAPI-KEY,
-        "X-RapidAPI-Host": import.meta.env.VITE_X-RAPIDAPI-HOST
+        "X-RapidAPI-Key": import.meta.env.VITE_X_RAPIDAPI_KEY,
+        "X-RapidAPI-Host": import.meta.env.VITE_X_RAPIDAPI_HOST
       },
     };
 
@@ -92,8 +92,8 @@ function HomePage() {
         output_language: "en",
       },
       headers: {
-        "X-RapidAPI-Key": import.meta.env.VITE_X-RAPIDAPI-KEY,
-        "X-RapidAPI-Host": import.meta.env.VITE_X-RAPIDAPI-HOST
+        "X-RapidAPI-Key": import.meta.env.VITE_X_RAPIDAPI_KEY,
+        "X-RapidAPI-Host": import.meta.env.VITE_X_RAPIDAPI_HOST
       },
     };
 
@@ -119,8 +119,8 @@ function HomePage() {
         output_language: 'en'
       },
       headers: {
-        "X-RapidAPI-Key": import.meta.env.VITE_X-RAPIDAPI-KEY,
-        "X-RapidAPI-Host": import.meta.env.VITE_X-RAPIDAPI-HOST
+        "X-RapidAPI-Key": import.meta.env.VITE_X_RAPIDAPI_KEY,
+        "X-RapidAPI-Host": import.meta.env.VITE_X_RAPIDAPI_HOST
       },
     };
     
@@ -143,10 +143,10 @@ function HomePage() {
 
   useEffect(() => {
     getMovieDb()
-    if(geners.length === 0){
+    if(geners.length <= 1){
       getGeners()
     }
-    if(countries.length === 0){
+    if(countries.length <= 1){
       getCountries()
     }
   }, [getGener, setGeners]);
